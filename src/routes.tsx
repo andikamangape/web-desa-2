@@ -19,8 +19,9 @@ import LaporanPage from '@/pages/Laporan'
 import PengaturanPage from '@/pages/Pengaturan'
 import NotFoundPage from '@/pages/NotFound'
 
-export const router = createBrowserRouter([
-  {
+export const router = createBrowserRouter(
+  [
+    {
     path: '/',
     Component: App,
     children: [
@@ -45,4 +46,4 @@ export const router = createBrowserRouter([
       { path: '*', Component: NotFoundPage },
     ],
   },
-])
+], { basename: import.meta.env.BASE_URL })
